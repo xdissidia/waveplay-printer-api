@@ -1,25 +1,25 @@
 {
-  "name": "waveplay-interactive-printer",
-  "version": "1.0.0",
-  "description": "Waveplay Printer Interface",
-  "main": "server.js",
-  "scripts": {
-    "start": "electron ."
-  },
-  "repository": "https://github.com/xdissidia/waveplay-printer-api",
-  "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "printer",
-    "demo"
-  ],
-  "author": "Jay Fructuoso",
-  "devDependencies": {
-    "electron": "^9.1.0"
-  },
-  "dependencies": {
-    "electron-pos-printer": "^1.2.0"
-  }
+    "name": "waveplay-interactive-printer",
+    "version": "1.0.0",
+    "description": "Waveplay Printer Interface",
+    "main": "server.js",
+    "scripts": {
+        "start": "electron ."
+    },
+    "repository": "https://github.com/xdissidia/waveplay-printer-api",
+    "keywords": [
+        "Electron",
+        "quick",
+        "start",
+        "tutorial",
+        "printer",
+        "demo"
+    ],
+    "author": "Jay Fructuoso",
+    "devDependencies": {
+        "electron": "^9.1.0"
+    },
+    "dependencies": {
+        "electron-pos-printer": "1.2.0"
+    }
 }
