@@ -8,7 +8,7 @@ const PRINTER_NAME = "XP-58"
 
 app.on("ready", function () {
     var mainWindow = new BrowserWindow({
-        icon : __dirname + '/site-icon.png',
+        icon: __dirname + '/site-icon.png',
         show: true,
         webPreferences: {
             nodeIntegration: true,
@@ -44,20 +44,18 @@ app.on("ready", function () {
 });
 function print(user_id, prize_name, reference_id) {
 
-    let printerName = "XP-58";
     let widthPage = "200px";
     let margin = "0 0 50px -20px";
-
     const data = [
         {
             type: "image",
-            path: path.join(__dirname, "assets/logo_5.png"),
-            position: "center",
-            width: "180px",
-            height: "167px",
+            path: path.join(__dirname, "assets/logo.png"), // file path
+            position: "center", // position of image: 'left' | 'center' | 'right'
+            width: "180px", // width of image in px; default: auto
+            height: "167px", // width of image in px; default: 50 or '50px'
         },
         {
-            type: "text",
+            type: "text", // 'text' | 'barCode' | 'qrCode' | 'image' | 'table'
             value:
                 "PATRON ID<br>",
             css: {
@@ -67,8 +65,9 @@ function print(user_id, prize_name, reference_id) {
             },
         },
         {
-            type: "text",
-            value: user_id + "<br><br>",
+            type: "text", // 'text' | 'barCode' | 'qrCode' | 'image' | 'table'
+            value:
+                user_id + "<br><br>",
             css: {
                 "font-size": "13px",
                 "font-family": "Metropolis SemiBold",
@@ -76,9 +75,9 @@ function print(user_id, prize_name, reference_id) {
             },
         },
         {
-            type: "text",
+            type: "text", // 'text' | 'barCode' | 'qrCode' | 'image' | 'table'
             value:
-                "PRIZE NAME",
+                "PRIZE",
             css: {
                 "font-size": "13px",
                 "font-family": "Metropolis Black",
@@ -86,8 +85,9 @@ function print(user_id, prize_name, reference_id) {
             },
         },
         {
-            type: "text",
-            value: prize_name + "<br><br>",
+            type: "text", // 'text' | 'barCode' | 'qrCode' | 'image' | 'table'
+            value:
+                prize_name + "<br><br>",
             css: {
                 "font-size": "13px",
                 "font-family": "Metropolis SemiBold",
@@ -95,7 +95,27 @@ function print(user_id, prize_name, reference_id) {
             },
         },
         {
-            type: "text",
+            type: "text", // 'text' | 'barCode' | 'qrCode' | 'image' | 'table'
+            value:
+                "REFERENCE NO.",
+            css: {
+                "font-size": "13px",
+                "font-family": "Metropolis Black",
+                "text-align": "center",
+            },
+        },
+        {
+            type: "text", // 'text' | 'barCode' | 'qrCode' | 'image' | 'table'
+            value:
+                reference_id + "<br><br>",
+            css: {
+                "font-size": "13px",
+                "font-family": "Metropolis SemiBold",
+                "text-align": "center",
+            },
+        },
+        {
+            type: "text", // 'text' | 'barCode' | 'qrCode' | 'image' | 'table
             value: "-----------------------------------",
             style: `text-align:center;`,
             css: {

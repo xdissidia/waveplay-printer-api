@@ -1,5 +1,5 @@
 {
-  "name": "Waveplay Interactive Printer",
+  "name": "waveplay-interactive-printer",
   "version": "1.0.0",
   "description": "Waveplay Printer Interface",
   "main": "server.js",
