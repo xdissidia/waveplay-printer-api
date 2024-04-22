@@ -4,7 +4,7 @@ const { PosPrinter } = require("electron-pos-printer");
 var url = require('url');
 const path = require("path");
 const PORT = 8080
-const PRINTER_NAME = "XP-58"
+const PRINTER_NAME = "XP-58 (copy 2)"
 
 app.on("ready", function () {
     var mainWindow = new BrowserWindow({
