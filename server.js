@@ -29,7 +29,7 @@ app.on("ready", function () {
                 });
                 var q = url.parse(req.url, true).query;
                 console.log(q);
-                print(q.user_id, q.prize_name, q.reference_id)
+                print(q.user_id, q.prize_name, q.reference_id, q.machine_id)
                 res.write('{"success":true}');
                 res.end(``);
 
@@ -42,7 +42,7 @@ app.on("ready", function () {
         console.log("http://localhost:" + PORT);
     });
 });
-function print(user_id, prize_name, reference_id) {
+function print(user_id, prize_name, reference_id, machine_id) {
 
     let widthPage = "200px";
     let margin = "0 0 50px -20px";
@@ -53,6 +53,26 @@ function print(user_id, prize_name, reference_id) {
             position: "center", // position of image: 'left' | 'center' | 'right'
             width: "180px", // width of image in px; default: auto
             height: "167px", // width of image in px; default: 50 or '50px'
+        },
+        {
+            type: "text", // 'text' | 'barCode' | 'qrCode' | 'image' | 'table'
+            value:
+                "MACHINE NAME<br>",
+            css: {
+                "font-size": "13px",
+                "font-family": "Metropolis Black",
+                "text-align": "center",
+            },
+        },
+        {
+            type: "text", // 'text' | 'barCode' | 'qrCode' | 'image' | 'table'
+            value:
+                machine_id + "<br><br>",
+            css: {
+                "font-size": "13px",
+                "font-family": "Metropolis SemiBold",
+                "text-align": "center",
+            },
         },
         {
             type: "text", // 'text' | 'barCode' | 'qrCode' | 'image' | 'table'
