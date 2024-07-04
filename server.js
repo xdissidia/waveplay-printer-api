@@ -29,7 +29,7 @@ app.on("ready", function () {
                 });
                 var q = url.parse(req.url, true).query;
                 console.log(q);
-                print(q.user_id, q.prize_name, q.reference_id, q.machine_id)
+                print(q.user_id, q.prize_name, q.reference_id, q.machine_id, q.datetime)
                 res.write('{"success":true}');
                 res.end(``);
 
@@ -42,7 +42,7 @@ app.on("ready", function () {
         console.log("http://localhost:" + PORT);
     });
 });
-function print(user_id, prize_name, reference_id, machine_id) {
+function print(user_id, prize_name, reference_id, machine_id, datetime) {
 
     let widthPage = "200px";
     let margin = "0 0 50px -20px";
@@ -156,7 +156,7 @@ function print(user_id, prize_name, reference_id, machine_id) {
     };
     const now = {
         type: "text",
-        value: "" + date(),
+        value: datetime,
         style: `text-align:center;`,
         css: { "font-size": "12px", "font-family": "sans-serif" },
     };
